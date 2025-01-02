@@ -8,6 +8,8 @@ WORKDIR /workspace
 # Step 2: Copy your Spring sample application code into the container
 COPY . /workspace
 
+#step3: Provide permission to maven wrapper
+RUN chmod +x mvnw
 
 # Step 3: Build the application with Maven and package it
 RUN ./mvnw clean package
