@@ -1,6 +1,6 @@
 This is a sample Spring boot starter application which accepts HTTP request on api/hello endpoint
 
-Build with Docker:
+<H1>Build with Docker</H1>:
 Clone the repository and run the below command from project root:
 
 docker build -t sample-spring-app .
