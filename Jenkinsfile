@@ -10,7 +10,8 @@ pipeline {
                 script {
                     echo 'Building the application...'
                     // Call the build.py script from the shared library and cat its content
-                    sh 'cat src/scripts/build.py'
+                    // sh 'cat src/scripts/build.py'
+                    build()  // Calls the build.groovy from vars/
                 }
             }
         }
@@ -20,7 +21,8 @@ pipeline {
                 script {
                     echo 'Deploying the application...'
                     // Call the deploy.py script from the shared library and cat its content
-                    sh 'cat src/scripts/deploy.py'
+                    // sh 'cat src/scripts/deploy.py'
+                    deploy()  // Calls the build.groovy from vars/
                 }
             }
         }
