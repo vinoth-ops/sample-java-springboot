@@ -2,7 +2,7 @@
 @Library('pipeline-library') _
 
 pipeline {
-    agent any
+    agent { label 'ec2' }  // The pipeline will run on any agent with the 'ec2' label
 
     stages {
         stage('Build') {
