@@ -10,7 +10,7 @@ pipeline {
                 script {
                     echo 'Building the application...'
                     // Call the build.py script from the shared library and cat its content
-                    sh 'cat scripts/build.py'
+                    sh 'cat src/scripts/build.py'
                 }
             }
         }
@@ -20,7 +20,7 @@ pipeline {
                 script {
                     echo 'Deploying the application...'
                     // Call the deploy.py script from the shared library and cat its content
-                    sh 'cat scripts/deploy.py'
+                    sh 'cat src/scripts/deploy.py'
                 }
             }
         }
