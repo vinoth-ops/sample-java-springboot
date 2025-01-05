@@ -9,9 +9,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building the application...'
-                    // Call the build.py script from the shared library and cat its content
-                    // sh 'cat src/scripts/build.py'
-                    build()  // Calls the build.groovy from vars/
+                    build('docker-hub-credentials')
                 }
             }
         }
@@ -20,8 +18,6 @@ pipeline {
             steps {
                 script {
                     echo 'Deploying the application...'
-                    // Call the deploy.py script from the shared library and cat its content
-                    // sh 'cat src/scripts/deploy.py'
                     deploy()  // Calls the build.groovy from vars/
                 }
             }
