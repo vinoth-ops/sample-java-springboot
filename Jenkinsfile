@@ -9,6 +9,10 @@ pipeline {
             steps {
                 script {
                     echo 'Building the application...'
+                    
+                    // Ensure the pom.xml file is present
+                    sh 'ls -l'  // List files 
+                    
                     build.runBuildAndPushDockerImage('docker-hub-credentials')
                 }
             }
