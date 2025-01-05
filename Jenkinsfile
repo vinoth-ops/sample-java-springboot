@@ -1,5 +1,5 @@
 // _ is used to load the library without assigning it to a variable
-@Library('pipeline-library') _
+@Library('pipeline-library@master') _
 
 pipeline {
     agent { label 'ec2' }  // The pipeline will run on any agent with the 'ec2' label
