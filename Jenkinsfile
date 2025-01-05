@@ -12,6 +12,8 @@ pipeline {
                     
                     // Ensure the pom.xml file is present
                     sh 'ls -l'  // List files 
+                    sh 'whoami'
+                    sh 'ls -l /home/ec2-user/workspace/Sample-spring-k8s-Build-push/pom.xml'
                     
                     build.runBuildAndPushDockerImage('docker-hub-credentials')
                 }
