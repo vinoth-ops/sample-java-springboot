@@ -9,7 +9,7 @@ pipeline {
             steps {
                 script {
                     echo 'Building the application...'
-                    build('docker-hub-credentials')
+                    build.runBuildAndPushDockerImage('docker-hub-credentials')
                 }
             }
         }
